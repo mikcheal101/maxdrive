@@ -1,0 +1,31 @@
+services:
+
+  max-db:
+    image: mongo:3.6.19-xenial
+    container_name: maxDb
+    ports:
+      - 27017:27017
+    networks:
+      - maxNetwork
+    volumes:
+      - mongo-data:/data/db
+
+  max-api:
+    build: .
+    container_name: maxApi
+    ports:
+      - 8080:8080
+      - 8090:8090
+    networks:
+      - maxNetwork
+    depends_on:
+      - max-db
+
+networks:
+  maxNetwork:
+    driver: bridge
+  
+volumes:
+  mongo-data:
+    driver: local
+  

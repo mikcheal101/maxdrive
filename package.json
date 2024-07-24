@@ -1,0 +1,37 @@
+{
+  "name": "maxdrive",
+  "version": "1.0.0",
+  "main": "./src/main.ts",
+  "repository": "git@github.com:mikcheal101/maxdrive.git",
+  "author": "mikcheal101 <hirekaanmicheal@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@automerge/automerge": "^2.2.6",
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jest": "^29.7.0",
+    "mongoose": "^8.5.1",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.3",
+    "tsc-node": "^0.0.3",
+    "uuidv4": "^6.2.13",
+    "ws": "^8.18.0"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "start": "npx nodemon",
+    "test": "jest --coverage --detectOpenHandles"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.11",
+    "@types/supertest": "^6.0.2",
+    "@types/ws": "^8.5.11",
+    "typescript": "^5.5.3"
+  }
+}
